@@ -1,7 +1,7 @@
 node {
     stage('Code Checkout') { // for display purposes
      echo 'Checout Code and clone it inside jenkins workspace.'
-     git 'https://github.com/itrainavengers/sonar-maven.git'
+     git 'https://github.com/chandru1-itrain/sonar-maven.git'
      }
    stage('Build Test & Package') {
       echo 'Build the package'
@@ -15,8 +15,8 @@ node {
              //sh 'mvn clean package sonar:sonar' 
              sh 'mvn clean verify sonar:sonar ' +
              ' -Dsonar.host.url=https://sonarcloud.io ' +
-             ' -Dsonar.organization=itrainspartans '+ 
-             ' -Dsonar.login=fe081245dcecb35f616d678b5dc61153533bdb18 ' +
+             ' -Dsonar.organization=sonar100 '+ 
+             ' -Dsonar.login=277c954ed40f3aaf5728a5fb3ddd79552a219b8a ' +
              ' -Dsonar.links.ci='    
          //}
       }
